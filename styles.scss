@@ -1,76 +1,118 @@
-.main{
-  background-color: black;
-  display: block;
-}
-
 header,footer,
 article,section,
 hgroup,nav,
 figure{
   display:block;
+}
 
-
-
-
+.navbar {
+  overflow: hidden;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 
+.navbar a {
+  float: right;
+  display: block;
+  color: yellow;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+.navbar a:hover {
+  background: black;
+  color: purple;
+}
+
+
+.main {
+  margin-top: 30px;
+background-color: black;
+}
+
+
+
+html,body {
+  color:#fddaec;
+  font-family:"Josefin Sans", sans-serif;
+  font-size:100%;
+  height:100%;
+  line-height:1.45;
+}
+
+
+
+
+#overlay {
+  background-color:rgba(0,0,0,.0);
+  height:103%;
+  left:0;
+  position:relative;
+  top:0;
+  transition:background-color 300ms ease;
+  width:100%;
+}
+
+.fade { background-color:rgba(0,0,0,.85) !important; }
+
+
+
+#hero-pic {
+  display:block;
+  height:auto;
+  width:100%;
+  padding: 0;
+  margin: 0;
+}
+
+#state {
+  bottom:0;
+  cursor:pointer;
+  font-size:2.25rem;
+  left:0;
+  line-height:1;
+  padding:2rem 2.5rem 1.65rem;
+  position:absolute;
+}
+@media only screen and (max-width:768px) {
+  #overlay { height:auto; }
+}
+@media only screen and (min-width:769px) {
+  .visible-mobile,.visible-tablet,.hidden-desktop { display:none !important; }
+}
+
+@media only screen and (min-width:480px) and (max-width:768px) {
+  .visible-mobile,.hidden-tablet,.visible-desktop { display:none !important; }
+}
+
+@media only screen and (max-width:479px) {
+  .hidden-mobile,.visible-tablet,.visible-desktop { display:none !important; }
+}
+
+article .line{
+  background-color:#15242a;
+  border-bottom-color:#204656;
+  margin:1.3em 0;
+}
 
 footer .line{
   margin:2em 0;
 }
 
-nav{
-
-  padding:0 5px;
-  position:absolute;
-  right:0;
-  top:3em;
-
-  border:1px solid #FCFCFC;
-
-  -moz-box-shadow:0 1px 1px #333333;
-  -webkit-box-shadow:0 1px 1px #333333;
-  box-shadow:0 1px 1px #333333;
-}
-
-nav ul li{
-  display:inline;
-}
-
-nav ul li a,
-nav ul li a:visited{
-  color:#565656;
-  display:block;
-  float:left;
-  font-size:1.25em;
-  font-weight:bold;
-  margin:5px 2px;
-  padding:7px 10px 4px;
-  text-shadow:0 1px 1px white;
-  text-transform:uppercase;
-}
-
-nav ul li a:hover{
-  text-decoration:none;
-  background-color:#f0f0f0;
-}
-
-nav, article, nav ul li a,figure{
-  -moz-border-radius:10px;
-  -webkit-border-radius:10px;
-  border-radius:10px;
-}
 
 
 
-.MusicVideo{
+article{
   background-color:purple;
   margin:3em 0;
   padding:20px;
-
-
 }
+
 figure{
   border:3px solid #142830;
   float:left;
@@ -91,13 +133,17 @@ figure img{
   margin-left:-60px;
 }
 
-.NewsPage{
-  background-color:purple;
-  margin:3em 0;
-  padding:20px;
 
+
+
+#video_background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1000;
 }
-
 
 footer{
   margin-bottom:30px;
@@ -111,8 +157,8 @@ footer p{
 }
 
 footer a,footer a:visited{
-  color:#cccccc;
-  background-color:#213e4a;
+  color:yellow;
+  background-color:black;
   display:block;
   padding:2px 4px;
   z-index:100;
@@ -121,7 +167,7 @@ footer a,footer a:visited{
 
 footer a:hover{
   text-decoration:none;
-  background-color:#142830;
+  background-color:purple;
 }
 
 footer a.by{
@@ -129,55 +175,6 @@ footer a.by{
 
 }
 
-footer a.up{
-  float:right;
-}
-
-
-@media screen and (min-width: 700px){
-  body {
-    display: grid;
-    grid-template-columns: auto 45% 20px 45% auto;
-    grid-template-areas:
-            "header header header header header"
-            ". musikvideo musikvideo musikvideo ."
-            ". billedetafdem . nyhedside ."
-            ". gallery gallery gallery ."
-            ". bio . andenbilledet ."
-            ". book book book ."
-            "footer footer footer footer footer";
-  }
-
-
-
-  header{
-    grid-area: header;
-  }
-  .MusicVideo{
-    grid-area: musikvideo;
-  }
-  .VenstreBilledet{
-    grid-area: billedetafdem;
-    padding: 50px;
-  }
-  .NewsPage{
-    grid-area: nyhedside;
-  }
-  .gallery{
-    grid-area: Gallery;
-    padding: 50px;
-  }
-  .Biography{
-    grid-area: bio;
-  }
-  .HøjreBilledet{
-    grid-area: andenbilledet;
-}
-  .BookASession{
-    grid-area: book;
-    padding: 50px;
-  }
-  footer{
-    grid-area: footer;
-  }
+footer a.up {
+  float: right;
 }
