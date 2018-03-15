@@ -29,6 +29,7 @@ figure {
   background-color: black; }
 
 html, body {
+  background-color: black;
   color: #fddaec;
   font-family: "Josefin Sans", sans-serif;
   font-size: 100%;
@@ -48,8 +49,7 @@ html, body {
 
 #hero-pic {
   display: block;
-  height: auto;
-  width: 100%;
+  height: 100vh;
   padding: 0;
   margin: 0; }
 
@@ -65,15 +65,6 @@ html, body {
 @media only screen and (max-width: 768px) {
   #overlay {
     height: auto; } }
-@media only screen and (min-width: 769px) {
-  .visible-mobile, .visible-tablet, .hidden-desktop {
-    display: none !important; } }
-@media only screen and (min-width: 480px) and (max-width: 768px) {
-  .visible-mobile, .hidden-tablet, .visible-desktop {
-    display: none !important; } }
-@media only screen and (max-width: 479px) {
-  .hidden-mobile, .visible-tablet, .visible-desktop {
-    display: none !important; } }
 article .line {
   background-color: #15242a;
   border-bottom-color: #204656;
@@ -126,7 +117,7 @@ img {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  width: 80vh;
   position: relative;
   margin: auto; }
 
