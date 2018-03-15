@@ -132,3 +132,52 @@ footer a.by{
 footer a.up{
   float:right;
 }
+
+
+@media screen and (min-width: 700px){
+  body {
+    display: grid;
+    grid-template-columns: auto 45% 20px 45% auto;
+    grid-template-areas:
+            "header header header header header"
+            ". musikvideo musikvideo musikvideo ."
+            ". billedetafdem . nyhedside ."
+            ". gallery gallery gallery ."
+            ". bio . andenbilledet ."
+            ". book book book ."
+            "footer footer footer footer footer";
+  }
+
+
+
+  header{
+    grid-area: header;
+  }
+  .MusicVideo{
+    grid-area: musikvideo;
+  }
+  .VenstreBilledet{
+    grid-area: billedetafdem;
+    padding: 50px;
+  }
+  .NewsPage{
+    grid-area: nyhedside;
+  }
+  .gallery{
+    grid-area: Gallery;
+    padding: 50px;
+  }
+  .Biography{
+    grid-area: bio;
+  }
+  .HøjreBilledet{
+    grid-area: andenbilledet;
+}
+  .BookASession{
+    grid-area: book;
+    padding: 50px;
+  }
+  footer{
+    grid-area: footer;
+  }
+}
