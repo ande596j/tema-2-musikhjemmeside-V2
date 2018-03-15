@@ -219,9 +219,9 @@ footer a:hover {
   background-color: purple; }
 
 footer a.by {
-  float: left; }
+  float: right; }
 
 footer a.up {
-  float: right; }
+  float: left; }
 
 /*# sourceMappingURL=styles.css.map */

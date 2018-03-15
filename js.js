@@ -76,3 +76,5 @@ function showSlides3(n) {
 
     slides[slideIndex-1].style.display = "block";
 }
+
+});
